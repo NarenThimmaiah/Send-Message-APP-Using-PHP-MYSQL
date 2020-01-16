@@ -1,0 +1,378 @@
+@import url(https://fonts.googleapis.com/css?family=Open+Sans:300,400,700,400italic);
+
+html {
+  box-sizing: border-box;
+}
+*, *:before, *:after {
+  box-sizing: inherit;
+}
+body {
+  background: #eff0f1;
+  font-family: 'Open Sans', arial, sans-serif;
+  color: darkslategray;
+}
+
+/* typography */
+a {
+  text-decoration: none;
+  color: inherit;
+}
+h2, h3, h4 {
+  font-weight: 300;
+  margin: 0;
+}
+h2 {
+  color: #1eb6a7;
+}
+b {
+  color: darkblue;
+}
+/* lists */
+ul, li {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+}
+
+/* general utility classes */
+
+
+/* header */
+header{
+    background-color: #EFEFEF;
+    border-bottom: #9e9e9e7d solid 1px;
+}
+header h1 {
+  margin: 0;
+  font-weight: 300;
+  padding: 1rem;
+  display: inline-block;
+}
+
+#header-logo {   
+    margin-top: 0;
+	background-image: url(../img/dna.png);
+    display: inline-block;
+    background-repeat: no-repeat;
+    margin-top: 0;
+    padding: 1rem;
+        width: 90px;
+    height: 90px;
+    text-indent: -99999px;  
+}
+
+
+/* header */
+nav[role=navigation] {
+  background: #2a3542;
+  color: #ddd;
+  /* icons */
+}
+
+nav[role=navigation] li a {
+  color: #ddd;
+  text-decoration: none;
+  display: block;
+  padding: 10px;
+}
+
+.roundcorners {
+       border-radius: 5px;
+    background: #F0F0F1;
+    padding: 20px;
+    width: 70px;
+    height: 70px;
+}
+
+.flex-roundcorners {
+   border-radius: 5px;
+    background: #A9A9A9;
+    padding: 20px;
+    width: 400px;
+    height: 200px;
+    margin: 0px auto;
+    margin-top: 30px;
+    position: relative;
+}
+
+.numbers{
+        color: #ddd;
+    text-decoration: none;
+    display: block;
+    margin: 0px auto;
+    position: relative;
+    right: 0px;
+    left: 35px;
+}
+
+h1{
+	font-size: 24px;
+}
+
+/* tables */
+
+.content:hover{
+  background: rgba(0, 0, 0, 0.1);
+}
+
+.content .active {
+	    background: rgb(218,8,90);
+    width: 10px;
+    height: 10px;
+    /* position: absolute; */
+    border-radius: 5px;
+    margin-top: 5px;
+    float: right;
+}
+
+nav[role=navigation] li a:hover {
+  background: rgb(218,8,90);
+}
+
+
+.send-message{
+  max-width:100%;
+  background-color: #F7F7F7;
+  font-size:.65em;
+  color:lightgray;
+  letter-spacing:.1em;
+}
+
+.form-container {
+  position: relative;
+  border: 3px solid orange;
+  height: 50px;
+  overflow: hidden;
+  margin-bottom: 10px;
+}
+
+.text_input {
+  height: 44px;
+  width: 60%;
+  padding: 0;
+  line-height: 30px;
+  font-size: 20px;
+  padding: 0;
+  margin: 3px;
+  margin-left: 20px;
+  border: none;
+}
+.text_input:focus {
+  outline: none;
+}
+
+.btn {
+  position: absolute; 
+  height: 50px;
+  line-height: 50px;
+  right: 0;
+  top: 0;
+  margin: 0;
+  padding: 0;
+  background: orange;
+  color: white;
+  border: none;
+  width: 30%;
+  font-weight: bold;
+}
+
+.btn:hover {
+  cursor: pointer;
+}
+
+
+
+
+div{
+    color: #fff;
+    font-family: Tahoma, Verdana, Segoe, sans-serif;
+    padding: 10px;
+}
+.container{
+        display: flex;
+    margin-left: 83px;
+    position: relative;
+}
+.fixed{
+       background-color: #EFEFEF;
+    width: 55%;
+    margin-top: 70px;
+    margin-left: -10px;
+    right: 0px;
+    position: relative;  
+	height: 135px;
+}
+
+.content{
+    border-bottom: #9e9e9e7d solid 1px;
+    color: #000000;
+    border-right: #9e9e9e7d solid 1px;
+    display: block;
+	padding: 5px;
+	}
+.flex-item{
+   background-color: #F7F7F7;
+    flex-grow: 1;
+    width: 100%;
+	 margin-top: 70px;
+    margin-left: -10px;
+    right: 0px;
+    position: relative;
+	 color: #000000;
+	 min-height: 550px;
+
+}
+
+.flex-content{    
+	text-align: center;
+    position: absolute;
+    margin: 0px auto;
+    left: 0px;
+    right: 0px;
+    margin-top: 10px;
+}
+
+#messagebar {
+    position: fixed;
+    bottom: 0px;
+    width: 100%;
+    margin-left: auto;
+    margin-right: auto;
+    text-align: center;
+    background: #F7F7F7;
+    margin-left: -10px;
+	border-top: #9e9e9e7d solid 1px;
+}
+
+.input-wrapper {
+    position: absolute;
+    right: 110px;
+    left: 0px;
+    top : 0px;
+    bottom: 0px;
+}
+
+/* Form wrapper styling */
+.form-wrapper {
+    position: relative;
+    left: 0px;
+    top: 0px;
+    width: 60%;
+    height: 37px;
+}
+ 
+.form-wrapper input {
+	height: 40px;
+    width: 100%;
+    padding: 8px 10px;
+    float: left; 
+    border: 1px solid black;
+    background: #ffff;
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+    margin-top: -10px;
+    border: #9e9e9e7d solid 1px;
+}
+ 
+/* Form submit button */
+.form-wrapper button {
+    position: absolute;
+    right: 16px;
+    top: 0px;
+    overflow: visible;
+    border: 0;
+    padding: 0;
+    cursor: pointer;
+    height: 40px;
+    width: 104px;
+    color: #ffffff;
+    background: rgb(218,8,90);
+}  
+
+#messageOutput{
+    position: relative;
+    color: red;
+}
+  
+
+
+@media screen and (min-width: 600px) {
+  html, body {
+    height: 100%;
+  }
+  header[role=banner] {
+   position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    z-index: 99;
+    height: 90px;
+  }
+ 
+  nav[role=navigation] {
+       position: fixed;
+    width: 90px;
+    top: 90px;
+    bottom: 0px;
+    left: 0px;
+  }
+ 
+
+}  
+
+@media screen and (max-width: 767px) {
+
+    header[role=banner] {
+   position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    z-index: 99;
+    height: 90px;
+  }
+ 
+  nav[role=navigation] {
+       position: fixed;
+    width: 90px;
+    top: 90px;
+    bottom: 0px;
+    left: 0px;
+  }
+  
+  .flex-item {
+   width: 100%;
+    display: block;
+	margin-top: 0px;
+}
+.container {
+    display: block;
+    margin-left: 83px;
+    position: relative;
+    width: 345px;
+}
+.fixed {
+        background-color: #EFEFEF;
+    width: auto;
+    display: block;
+    height: 100%;
+}
+
+.form-wrapper {  
+    width: 80%;
+}
+
+
+.flex-roundcorners {
+    border-radius: 5px;
+    background: #A9A9A9;
+    padding: 20px;
+    width: 200px;
+    height: 55px;
+    margin: 0px auto;
+    /* margin-top: 30px; */
+    position: relative;
+    /* bottom: 14px; */
+}
+  }
+ 
