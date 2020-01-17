@@ -1,22 +1,31 @@
 <?php
 require_once "conn.php";
-
 $success ='';
-    if (isset($_POST['signup'])) { 
+if (isset($_POST['signup'])) { 
 		//echo "I am in"; die();
 		
 		$msg= mysqli_real_escape_string($conn,$_POST['message']);
-		$sql = "INSERT INTO message_content (message_con) VALUES('$msg')";
-		
+		$mess = "0";
+		$sql = "INSERT INTO message_content (message_con, message_id) VALUES('$msg','$mess')";
+		//echo  $sql; die();
 if(mysqli_query($conn,$sql))
 {
 	$success="Message sent successfully...";
 	// Print auto-generated id
 	//echo "New record has id: " . mysqli_insert_id($conn);
-	$last = mysqli_insert_id($conn);	
-	$update_sql = "update message_content set is_new = '1' where message_id='$last'";
+	//$last = mysqli_insert_id($conn);	
+	$data_sql = "SELECT * FROM message_content order by message_id desc limit 1,1";
+$results = mysqli_query($conn, $data_sql);
+
+if (mysqli_num_rows($results) > 0) {
+    // output data of each row
+while($rows = mysqli_fetch_assoc($results)) { 
+ $last = $rows["message_id"]; 
+ $update_sql = "update message_content set is_new = '1' where message_id='".$last."'";
 	//echo  $update_sql; die();
 	$retval = mysqli_query($conn,$update_sql);
+}}
+	
 	
 }
 else
@@ -65,7 +74,7 @@ if (mysqli_num_rows($result) > 0) {
 		<span class="content">		
 		<?php
         echo $row["message_con"];
-		if ($row["is_new"] == 1) {?>
+		if ($row["is_new"] == 0) {?>
 		<span class="active"> </span>
 	<?php } ?>
 		</span>
